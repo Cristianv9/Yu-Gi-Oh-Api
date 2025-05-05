@@ -5,6 +5,13 @@ li{
     letter-spacing: 1px;
 }
 
+h4{
+    font-style: italic;
+    font-size: small;
+}
+
+
+
 
 /* Header */
 .masthead {

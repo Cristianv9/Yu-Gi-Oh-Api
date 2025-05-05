@@ -4,11 +4,14 @@ import '../styles/global.css';
 
 // data source
 // replace temporary JSON placeholder API
-const source = 'https://botw-compendium.herokuapp.com/api/v3/compendium/all';
+const source = 'https://db.ygoprodeck.com/api/v7/cardinfo.php';
 // fetch the data
 const res = await fetch(source); 
 // store retreived data
-const zeldaData = await res.json();
+const yugiohData = await res.json();
+
+console.log(yugiohData.data[0].card_images[0].image_url);
+
 ---
 
 <html lang="en">
@@ -26,7 +29,7 @@ const zeldaData = await res.json();
 	<body>
 		
 		<header class="masthead">
-			<h1 class="site-title">Zelda Compendium</h1>
+			<h1 class="site-title">Yu-Gi-Oh!</h1>
 		</header>
 
 		<main id="content" class="main-area">
@@ -35,13 +38,14 @@ const zeldaData = await res.json();
 		  
 				<!-- Your API Data -->
 				{
-					zeldaData.data.map( item => (
+					yugiohData.data.map( item => (
 					<li class="card-item">
 						
 						<figure>
-							<h3>{ item.name }</h3>
-							<img src='{ item.image }'/>
-							<figcaption>{ item.description }</figcaption>
+							<h2>{ item.name }</h2>
+							<h4>{ item.type }</h4>
+							<img src={ item.card_images[0].image_url_cropped }/>
+							<figcaption>{ item.desc }</figcaption>
 						</figure>
 
 					</li> 
