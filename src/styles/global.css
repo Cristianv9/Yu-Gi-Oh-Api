@@ -10,6 +10,58 @@ h4{
     font-size: small;
 }
 
+.card-item figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: hsla(0, 0%, 0%, 0.85); 
+  color: white;
+  opacity: 0;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: opacity 0.3s ease;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+  
+  .card-item:hover figcaption {
+    opacity: 1;
+  }
+  /* MONSTER */
+.card-item.monster:hover figcaption {
+  background: hsla(0, 70%, 45%, 0.85);
+}
+
+/* SPELL: */
+.card-item.spell:hover figcaption {
+  background: hsla(210, 100%, 40%, 0.85);
+}
+
+/* TRAP:  */
+.card-item.trap:hover figcaption {
+  background: hsla(290, 70%, 40%, 0.85);
+}
+
+/* Fusions */
+.card-item.fusion:hover figcaption {
+  background: hsla(330, 70%, 50%, 0.85);
+}
+
+/* Ritual */
+.card-item.ritual:hover figcaption {
+  background: hsla(180, 60%, 40%, 0.85);
+}
+  
+  .card-item:hover img {
+    transform: scale(1.05);
+  }
+  
 
 
 
@@ -49,7 +101,7 @@ transition: all 0.4s;
 
 a:focus .caption,
 a:hover .caption {
-background: hsla(246, 40%, 30%, 1);
+background: hsl(246, 40%, 30%);
 }
 
 .caption-title {

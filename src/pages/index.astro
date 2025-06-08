@@ -39,7 +39,7 @@ console.log(yugiohData.data[0].card_images[0].image_url);
 				<!-- Your API Data -->
 				{
 					yugiohData.data.map( item => (
-					<li class="card-item">
+					<li class={`card-item ${item.type.toLowerCase()}`} >
 						
 						<figure>
 							<h2>{ item.name }</h2>
