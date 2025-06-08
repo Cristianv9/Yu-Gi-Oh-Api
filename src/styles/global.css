@@ -10,6 +10,28 @@ h4{
     font-size: small;
 }
 
+.card-item {
+position: relative; 
+overflow: hidden; 
+border-radius: 10px; 
+box-shadow: 0 2px 8px hsla(0, 0%, 0%, 0.1);
+transition: transform 0.2s ease;
+background: hsl(0, 0%, 100%);  
+width: 90%;  
+margin: 0 auto; 
+ }
+.card-item figure { 
+margin: 0; 
+position: relative;
+ } 
+.card-item img { 
+display: block;
+width: 100%; 
+height: auto; 
+transition: transform 0.3s ease;
+ }
+
+
 .card-item figcaption {
   position: absolute;
   top: 0;
@@ -17,7 +39,7 @@ h4{
   right: 0;
   bottom: 0;
   background: hsla(0, 0%, 0%, 0.85); 
-  color: white;
+  color: hsl(0, 0%, 100%);
   opacity: 0;
   padding: 1rem;
   display: flex;
@@ -25,40 +47,32 @@ h4{
   justify-content: center;
   text-align: center;
   transition: opacity 0.3s ease;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   line-height: 1.4;
 }
 
   
-  .card-item:hover figcaption {
+.card-item:hover figcaption {
     opacity: 1;
   }
+
   /* MONSTER */
 .card-item.monster:hover figcaption {
-  background: hsla(0, 70%, 45%, 0.85);
+  background: hsl(33.9, 86.5%, 29.8%);
 }
 
 /* SPELL: */
 .card-item.spell:hover figcaption {
-  background: hsla(210, 100%, 40%, 0.85);
+  background: hsl(180, 100%, 28.6%);
 }
 
 /* TRAP:  */
 .card-item.trap:hover figcaption {
-  background: hsla(290, 70%, 40%, 0.85);
+  background: hsl(300, 100%, 33%);
 }
 
-/* Fusions */
-.card-item.fusion:hover figcaption {
-  background: hsla(330, 70%, 50%, 0.85);
-}
-
-/* Ritual */
-.card-item.ritual:hover figcaption {
-  background: hsla(180, 60%, 40%, 0.85);
-}
   
-  .card-item:hover img {
+.card-item:hover img {
     transform: scale(1.05);
   }
   
@@ -67,18 +81,36 @@ h4{
 
 /* Header */
 .masthead {
-    text-align: center;
-    border-bottom: 1px solid hsl(0, 0%, 90%);
+  text-align: center;
+  border-bottom: 3px solid hsl(0, 80%, 50%);  
+  background: hsl(0, 80%, 50%);  
+  padding: 1rem 0; 
+}
+.masthead .site-title {
+  color: white;
+  font-size: 3rem;  
+  font-family: 'Yu Gothic', 'Arial', serif; 
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+  text-shadow: 2px 2px 4px hsla(0, 0%, 0%, 1); 
+}
+
+.main-area {
+  margin-top: 2rem; /* Adjust this value as needed for more or less space */
+}
+
+body{
+   background-image: url('WCS.jpg')
 }
 
 /* Header */
-img {
+/*img {
     display: block;
     border: 0;
     width: 100%;
     height: auto;
   }
-    
+      
 .cards {
 margin: 0;
 padding: 0;
@@ -109,7 +141,7 @@ margin: 0;
 font-size: 1.4em;
 line-height: 1.1em;
 }
-
+*/
 /*--------------------------------------------------------------
 CSS Grid layout for wider screens, when browser supports grid:
 --------------------------------------------------------------*/
